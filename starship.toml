@@ -13,10 +13,11 @@ $character\
 """
 
 [username]
-style_user = '#073642'
+format = '[$user]($style) '
+style_user = '#073642 bold'
 disabled = false
 show_always = true
-aliases = { "luizgustavo" = "ada" }
+aliases = { "luizgustavo" = "luca" }
 
 [directory]
 style = "#2aa198"
@@ -27,7 +28,7 @@ error_symbol = "[λ](red bold)"
 vimcmd_symbol = "[λ](green bold)"
 
 [git_branch]
-format = "[$branch]($style)"
+format = '[$branch]($style)'
 style = "#073642 bold"
 
 [git_status]
