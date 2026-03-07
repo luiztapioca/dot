@@ -17,7 +17,7 @@ format = '[$user]($style) '
 style_user = '#073642'
 disabled = false
 show_always = true
-aliases = { "luizgustavo" = "luca" }
+aliases = { "luizgustavo" = "l" }
 
 [directory]
 style = "#2aa198"
