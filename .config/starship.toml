@@ -1,7 +1,5 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-palette = "solarized"
-
 format = """
 $username\
 $hostname\
@@ -17,26 +15,26 @@ $character\
 
 [username]
 format = '[$user]($style) '
-style_user = 'texto_base'
+style_user = 'white'
 disabled = false
 show_always = true
 aliases = { "luizgustavo" = "pam" }
 
 [directory]
-style = "ciano"
+style = "#2aa198"
 
 [character]
-success_symbol = "[λ](magenta bold)"
-error_symbol = "[λ](vermelho bold)"
-vimcmd_symbol = "[λ](verde bold)"
+success_symbol = "[λ](#d33682 bold)"
+error_symbol = "[λ](#dc322f bold)"
+vimcmd_symbol = "[λ](#859900 bold)"
 
 [git_branch]
 format = '[$branch]($style)'
-style = "texto_base bold"
+style = "white bold"
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](rosa) ($ahead_behind$stashed)]($style)"
-style = "ciano"
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](#6c71c4) ($ahead_behind$stashed)]($style)"
+style = "#2aa198"
 conflicted = "​"
 untracked = "​"
 modified = "​"
@@ -47,23 +45,15 @@ stashed = "≡"
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "texto_base"
+style = "white"
 
 [cmd_duration]
 format = "[$duration]($style) "
-style = "amarelo"
+style = "#b58900"
 
 [python]
 format = "[$virtualenv]($style) "
-style = "texto_base"
+style = "white"
 detect_extensions = []
 detect_files = []
 
-[palettes.solarized]
-texto_base = "#839496"
-ciano = "#2aa198"
-magenta = "#d33682"
-amarelo = "#b58900"
-vermelho = "#dc322f"
-verde = "#859900"
-rosa = "218"
