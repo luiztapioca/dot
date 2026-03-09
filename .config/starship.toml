@@ -61,3 +61,18 @@ format = "[$virtualenv]($style) "
 style = "#859900"
 detect_extensions = []
 detect_files = []
+
+[rust]
+symbol = "rs "
+format = "[$symbol$version]($style) "
+style = "#cb4b16"
+
+[golang]
+symbol = "go "
+format = "[$symbol$version]($style) "
+style = "#2aa198"
+
+[nodejs]
+symbol = "node "
+format = "[$symbol$version]($style) "
+style = "#b58900"
