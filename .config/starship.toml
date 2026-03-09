@@ -8,17 +8,23 @@ $git_branch\
 $git_state\
 $git_status\
 $cmd_duration\
-$python\
 $line_break\
+$python\
 $character\
 """
 
 [username]
-format = '[$user]($style) '
-style_user = 'white'
+format = '[$user]($style)[@](#dc322f)'
+style_user = '#586e75'
 disabled = false
 show_always = true
-aliases = { "luizgustavo" = "pam" }
+aliases = { "luizgustavo" = "luca" }
+
+[hostname]
+format = '[$hostname]($style) '
+style = '#586e75'
+ssh_only = false
+aliases = { "MacBook-Air" = "mac" }
 
 [directory]
 style = "#2aa198"
@@ -30,7 +36,7 @@ vimcmd_symbol = "[λ](#859900 bold)"
 
 [git_branch]
 format = '[$branch]($style)'
-style = "white bold"
+style = "#586e75 bold"
 
 [git_status]
 format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](#6c71c4) ($ahead_behind$stashed)]($style)"
@@ -45,7 +51,7 @@ stashed = "≡"
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "white"
+style = "#586e75"
 
 [cmd_duration]
 format = "[$duration]($style) "
@@ -53,7 +59,7 @@ style = "#b58900"
 
 [python]
 format = "[$virtualenv]($style) "
-style = "white"
+style = "#586e75"
 detect_extensions = []
 detect_files = []
 
