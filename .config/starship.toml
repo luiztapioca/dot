@@ -1,78 +1,48 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-$username\
-$hostname\
 $directory\
 $git_branch\
-$git_state\
 $git_status\
-$cmd_duration\
-$line_break\
+$haskell\
 $python\
 $character"""
 
-[username]
-format = '[$user]($style)'
-style_user = '#586e75'
-disabled = false
-show_always = true
-aliases = { "luizgustavo" = "luca" }
-
-[hostname]
-format = '[ :: ](#859900)[$hostname]($style) '
-style = '#586e75'
-ssh_only = false
-aliases = { "MacBook-Air" = "mac" }
-
 [directory]
-style = "#2aa198"
-
-[character]
-success_symbol = "[λ](#d33682 bold)"
-error_symbol = "[λ](#dc322f bold)"
-vimcmd_symbol = "[λ](#859900 bold)"
+style = "bold #268bd2"
+format = "[$path]($style) "
+truncation_length = 2
 
 [git_branch]
-format = '[$branch]($style)'
-style = "#586e75 bold"
+symbol = ""
+style = "bold #6c71c4"
+format = "[:: $branch]($style) "
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](#6c71c4) ($ahead_behind$stashed)]($style)"
-style = "#2aa198"
-conflicted = ""
-untracked = ""
-modified = ""
-staged = ""
-renamed = ""
-deleted = ""
-stashed = "≡"
-
-[git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
+format = '([\[$all_status$ahead_behind\]]($style) )'
 style = "#586e75"
+conflicted = "="
+untracked = "?"
+modified = "!"
+staged = "+"
+renamed = ">"
+deleted = "x"
+ahead = "^"
+behind = "v"
 
-[cmd_duration]
-format = "[$duration]($style) "
-style = "#b58900"
+[haskell]
+symbol = "λ"
+style = "bold #6c71c4"
+format = '([$symbol $version]($style) )'
 
 [python]
-format = "[$virtualenv]($style) "
+symbol = "py"
 style = "#859900"
-detect_extensions = []
-detect_files = []
+format = '([$symbol $virtualenv]($style) )'
 
-[rust]
-symbol = "rs "
-format = "[$symbol$version]($style) "
-style = "#cb4b16"
+[character]
+success_symbol = "[λ>](bold #d33682)"
+error_symbol = "[λ>](bold #dc322f)"
 
-[golang]
-symbol = "go "
-format = "[$symbol$version]($style) "
-style = "#2aa198"
-
-[nodejs]
-symbol = "node "
-format = "[$symbol$version]($style) "
-style = "#b58900"
+[cmd_duration]
+disabled = true
