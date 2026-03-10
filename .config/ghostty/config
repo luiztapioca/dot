@@ -2,6 +2,6 @@ theme = iTerm2 Solarized Light
 cursor-style = block
 cursor-style-blink = false
 
-font-family = "Monaco"
+font-family = "Monaco Nerd Font Mono"
 shell-integration-features = ssh-terminfo,ssh-env,no-cursor
 
