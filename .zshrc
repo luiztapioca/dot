@@ -22,3 +22,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 [ -f "/Users/luizgustavo/.ghcup/env" ] && . "/Users/luizgustavo/.ghcup/env" # ghcup-env
 . "$HOME/.local/bin/env"
+
+alias vim='nvim'
