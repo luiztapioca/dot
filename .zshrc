@@ -24,3 +24,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 . "$HOME/.local/bin/env"
 
 alias vim='nvim'
+
+gpush() {
+	git add .
+	git commit -m "$1"
+	git push
+}
